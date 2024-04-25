@@ -3,7 +3,7 @@ cwlVersion: v1.0
 class: CommandLineTool
 
 requirements:
-  InlineJavascriptRequirement
+  InlineJavascriptRequirement:
     expressionLib:
     - var default_output_filename = function() {
             return inputs.input_file.location.split('/').slice(-1)[0].split('.').slice(0,-1).join('.') + ".fastxstat"

@@ -3,7 +3,7 @@ cwlVersion: v1.0
 class: CommandLineTool
 
 hints:
-  DockerRequirement
+  DockerRequirement:
     dockerPull: biowardrobe2/hopach:v0.0.6
 
 inputs:
