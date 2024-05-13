@@ -39,15 +39,18 @@ arguments:
     valueFrom: $(inputs.reads_2.basename).trimmed$(inputs.reads_2.nameext)
 
 outputs:
-  report: stdout
+  report:
+    type: File
+    outputBinding:
+      glob: report.txt
   trimmed_reads_1:
     type: File
-    format: $(inputs.reads_1.format)
+    format: http://edamontology.org/format_1930
     outputBinding:
       glob: $(inputs.reads_1.basename).trimmed$(inputs.reads_1.nameext)
   trimmed_reads_2:
     type: File
-    format: $(inputs.reads_2.format)
+    format: http://edamontology.org/format_1930
     outputBinding:
       glob: $(inputs.reads_2.basename).trimmed$(inputs.reads_2.nameext)
 
