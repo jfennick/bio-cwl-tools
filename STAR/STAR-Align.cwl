@@ -59,31 +59,34 @@ inputs:
   OutFilterType:
     type:
      - "null"
-     - type: enum
-       symbols:
-        - Normal
-        - BySJout
+     - string
+    #  - type: enum
+    #    symbols:
+    #     - Normal
+    #     - BySJout
     inputBinding:
       prefix: "--outFilterType"
 
   OutFilterIntronMotifs:
     type:
      - "null"
-     - type: enum
-       symbols:
-        - None
-        - RemoveNoncanonical
-        - RemoveNoncanonicalUnannotated
+     - string
+    #  - type: enum
+    #    symbols:
+    #     - None
+    #     - RemoveNoncanonical
+    #     - RemoveNoncanonicalUnannotated
     inputBinding:
       prefix: "--outFilterIntronMotifs"
 
   OutSAMtype:
     type:
      - "null"
-     - type: enum
-       symbols:
-        - "BAM"
-        - "SAM"
+     - string
+    #  - type: enum
+    #    symbols:
+    #     - "BAM"
+    #     - "SAM"
     inputBinding:
       prefix: "--outSAMtype"
       position: 3
@@ -138,13 +141,14 @@ inputs:
   ChimOutType:
     type:
      - "null"
-     - type: enum
-       symbols:
-        - Junctions
-        - SeparateSAMold
-        - WithinBAM
-        - "WithinBAM HardClip"
-        - "WithinBAM SoftClip"
+     - string
+    #  - type: enum
+    #    symbols:
+    #     - Junctions
+    #     - SeparateSAMold
+    #     - WithinBAM
+    #     - "WithinBAM HardClip"
+    #     - "WithinBAM SoftClip"
 
   ChimSegmentMin:
     type: int?
@@ -174,31 +178,34 @@ inputs:
   OutReadsUnmapped:
     type:
      - "null"
-     - type: enum
-       symbols:
-        - None
-        - Fastx
+     - string
+    #  - type: enum
+    #    symbols:
+    #     - None
+    #     - Fastx
     inputBinding:
       prefix: "--outReadsUnmapped"
 
   OutSAMstrandField:
     type:
      - "null"
-     - type: enum
-       symbols:
-        - None
-        - intronMotif
+     - string
+    #  - type: enum
+    #    symbols:
+    #     - None
+    #     - intronMotif
     inputBinding:
       prefix: "--outSAMstrandField"
 
   OutSAMunmapped:
     type:
      - "null"
-     - type: enum
-       symbols:
-        - None
-        - Within
-        - "Within KeepPairs"
+     - string
+    #  - type: enum
+    #    symbols:
+    #     - None
+    #     - Within
+    #     - "Within KeepPairs"
     inputBinding:
       prefix: "--outSAMunmapped"
 
@@ -210,11 +217,12 @@ inputs:
   OutSamMode:
     type:
      - "null"
-     - type: enum
-       symbols:
-        - None
-        - Full
-        - NoQS
+     - string
+    #  - type: enum
+    #    symbols:
+    #     - None
+    #     - Full
+    #     - NoQS
     inputBinding:
       prefix: "--outSAMmode"
 
@@ -231,13 +239,14 @@ inputs:
   GenomeLoad:
     type:
      - "null"
-     - type: enum
-       symbols:
-        - LoadAndKeep
-        - LoadAndRemove
-        - LoadAndExit
-        - Remove
-        - NoSharedMemory
+     - string
+    #  - type: enum
+    #    symbols:
+    #     - LoadAndKeep
+    #     - LoadAndRemove
+    #     - LoadAndExit
+    #     - Remove
+    #     - NoSharedMemory
     inputBinding:
       prefix: "--genomeLoad"
 

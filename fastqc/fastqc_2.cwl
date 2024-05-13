@@ -23,9 +23,10 @@ inputs:
   format_enum:
     type:
       - "null"
-      - type: enum
-        name: "format"
-        symbols: ['bam','sam','bam_mapped','sam_mapped','fastq']
+      - string
+      # - type: enum
+      #   name: "format"
+      #   symbols: ['bam','sam','bam_mapped','sam_mapped','fastq']
     inputBinding:
       position: 6
       prefix: '--format'
