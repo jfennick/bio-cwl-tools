@@ -244,16 +244,19 @@ inputs:
 baseCommand: [STAR, --runMode, alignReads]
 
 outputs:
+  unmapped_reads:
+    type: ["null", File]
+    outputBinding:
+      glob: "Unmapped.out*"
+# inference chooses outputs in reverse order, so
+# move alignment last so that inference will choose alignment
+# without having to specify a format.
   alignment:
     type:
      - File
      - File[]
     outputBinding:
       glob: "*.bam"
-  unmapped_reads:
-    type: ["null", File]
-    outputBinding:
-      glob: "Unmapped.out*"
 
 $namespaces:
   edam: http://edamontology.org/
